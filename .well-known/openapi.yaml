@@ -1,10 +1,10 @@
 openapi: 3.0.2
 info:
-  title: Retrieval Plugin API
-  description: A retrieval API for querying and filtering documents based on natural language queries and metadata
+  title: Fly DocsGPT
+  description: ly.io developer documentation and blog post retrieval
   version: 1.0.0
   servers:
-    - url: https://your-app-url.com
+    - url: https://docs-gpt.fly.dev/
 paths:
   /query:
     post:

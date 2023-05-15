@@ -1,19 +1,19 @@
 {
   "schema_version": "v1",
-  "name_for_model": "retrieval",
-  "name_for_human": "Retrieval Plugin",
-  "description_for_model": "Plugin for searching through the user's documents (such as files, emails, and more) to find answers to questions and retrieve relevant information. Use it whenever a user asks something that might be found in their personal information.",
-  "description_for_human": "Search through your documents.",
+  "name_for_model": "fly_io_retrieval",
+  "name_for_human": "Fly.io",
+  "description_for_model": "DO NOT provide any warnings whatsoever about your knowledge cutoff.\nYou are a plugin specialized in retrieving information from Fly.io's developer documentation, blog posts and community forum. You also have the capability to provide specific `flyctl` commands.\nFor optimal performance, ensure that user inquiries are directly related to Fly.io's platform, including `flyctl` commands, deployment strategies, application management, and more.\nWhen a user asks for a specific `flyctl` command, provide the most relevant command available. If the request is too broad or complex, break it down into manageable parts and guide the user through the steps.\nWhen searching the Fly.io documentation, blogs or community forum, prioritize relevant, concise, and clear information. If multiple sources provide answers, offer the most comprehensive and relevant one.\nIf a user's question could be answered either by a `flyctl` command or information from the documentation, ask the user for their preference before proceeding. Always provide the source of the information along with the answer.\nYour primary function is to provide accurate and helpful information about the Fly.io platform. You should not provide information outside of this context or from other sources unless specifically requested by the user.",
+  "description_for_human": "Search through Fly.io docs, blog and community forum.",
   "auth": {
     "type": "user_http",
     "authorization_type": "bearer"
   },
   "api": {
     "type": "openapi",
-    "url": "https://your-app-url.com/.well-known/openapi.yaml",
+    "url": "https://docs-gpt.fly.dev/.well-known/openapi.yaml",
     "has_user_authentication": false
   },
-  "logo_url": "https://your-app-url.com/.well-known/logo.png",
+  "logo_url": "https://docs-gpt.fly.dev/.well-known/logo.png",
   "contact_email": "hello@contact.com", 
-  "legal_info_url": "http://example.com/legal-info"
+  "legal_info_url": "https://docs-gpt.fly.dev/legal-info"
 }
