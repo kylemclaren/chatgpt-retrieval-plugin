@@ -1,10 +1,10 @@
 openapi: 3.0.2
 info:
   title: Fly DocsGPT
-  description: ly.io developer documentation and blog post retrieval
-  version: 1.0.0
-  servers:
-    - url: https://docs-gpt.fly.dev/
+  description: Fly.io developer documentation and blog post retrieval
+  version: 1.0.1
+servers:
+  - url: https://docs-gpt.fly.dev
 paths:
   /query:
     post:
@@ -91,6 +91,9 @@ components:
         source_id:
           title: Source Id
           type: string
+        url:
+          title: Url
+          type: string
         author:
           title: Author
           type: string
@@ -123,7 +126,7 @@ components:
         top_k:
           title: Top K
           type: integer
-          default: 3
+          default: 20
     QueryRequest:
       title: QueryRequest
       required:
@@ -167,6 +170,9 @@ components:
         - email
         - file
         - chat
+        - blog
+        - docs
+        - community
       type: string
       description: An enumeration.
     ValidationError:

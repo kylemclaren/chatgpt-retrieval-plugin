@@ -51,7 +51,7 @@ class QdrantDataStore(DataStore):
             grpc_port=int(QDRANT_GRPC_PORT),
             api_key=QDRANT_API_KEY,
             prefer_grpc=True,
-            timeout=10,
+            timeout=60,
         )
         self.collection_name = collection_name or QDRANT_COLLECTION
 
@@ -189,6 +189,7 @@ class QdrantDataStore(DataStore):
                 "document_id": "metadata.document_id",
                 "source": "metadata.source",
                 "source_id": "metadata.source_id",
+                "url": "metadata.url",
                 "author": "metadata.author",
             }
 
