@@ -113,7 +113,7 @@ class PgVectorDataStore(DataStore):
                 if query.filter.document_id:
                     params["in_document_id"] = query.filter.document_id
                 if query.filter.source:
-                    params["in_source"] = query.filter.source.value
+                    params["in_source"] = query.filter.source
                 if query.filter.source_id:
                     params["in_source_id"] = query.filter.source_id
                 if query.filter.author:
